@@ -1,0 +1,27 @@
+from finance_tracker import FinanceTracker
+
+def main():
+    tracker = FinanceTracker()
+
+    while True:
+        print("\n--- Personal Finance Tracker ---")
+        print("1. Add Transaction")
+        print("2. View Reports")
+        print("3. Exit")
+        
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            transaction_type = input("Enter 'income' or 'expense': ").lower()
+            amount = float(input("Enter the amount: "))
+            category = input("Enter the category: ")
+            tracker.add_transaction(transaction_type, amount, category)
+        elif choice == "2":
+            tracker.view_reports()
+        elif choice == "3":
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
