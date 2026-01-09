@@ -1,0 +1,4 @@
+This project simulates DeepThought's Growth OS frontend.
+A local variable (growthScore) represents business readiness.
+The UI reacts dynamically to this variable, mimicking how real growth systems make decisions.
+
